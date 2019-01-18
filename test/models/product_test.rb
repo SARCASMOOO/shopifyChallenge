@@ -16,7 +16,7 @@ class ProductTest < ActiveSupport::TestCase
   test "check product queries correct product" do
     assert false
   end
-  
+
   test "query to get all products" do
     assert false
   end

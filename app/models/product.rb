@@ -1,5 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :cart
   before_save :downcase_name
   validates :name, presence: true, length: {maximum: 15}, uniqueness: {case_sensitive: false}
   validates :price, presence: true, length: {maximum: 15}

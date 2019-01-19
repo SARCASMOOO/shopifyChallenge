@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
   def setup
-    @product = Products.new(name: "Apple", price: 1.96, inventory: 3)
+    @product = Product.new(name: "Apple", price: 1.96, inventory: 3)
   end
 
   test "valid product" do
@@ -33,7 +33,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "check if name is too long" do
-    @product.name = "This name for a product is way too long for meeeeee"
+    @product.name = "This name for a product is way too long for meeeee"
     assert_not @product.valid?
   end
 end

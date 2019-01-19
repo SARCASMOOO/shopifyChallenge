@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/product/', to: 'product#product'
   get '/products/', to: 'product#products'
   get '/purchase/', to: 'product#purchase'
+  get '/order/', to: 'order#addToOrder'
   resources :product
   resources :cart
+
 end

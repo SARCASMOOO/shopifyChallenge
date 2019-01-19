@@ -8,4 +8,12 @@ class PurchaseFlowTest < ActionDispatch::IntegrationTest
 
     assert_equal @banana.price*2, json_response['total'].to_i
   end
+
+  test "check invalid purchases" do
+    assert false
+  end
+
+  test "check product inventory does not change before checking out" do
+    assert false
+  end
 end

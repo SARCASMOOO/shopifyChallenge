@@ -6,11 +6,23 @@ class CartController < ApplicationController
   end
 
   def checkout
-    tempCart = Product.find_by(name: params[:name])
+    tempCart = Cart.find_by(name: params[:cartName])
     if tempCart.nil? == false
-      # TODO: Calculate total cost return it and make changes to products
-      render json: {cart: tempCart, result: true} and return;
+      total = 0
+      orders = CartsProduct.where("cart_id == #{tempCart.id}")
+      for order in orders
+        tempProd = Product.find(order.product_id)
+
+        if tempProd.inventory >= order.amount
+          test = tempProd.inventory - order.amount
+          tempProd.update(inventory: test)
+          total += order.amount * tempProd.price
+        end
+      end
+
+      render json: {cart: tempCart, result: true, total: total} and return;
     end
+
     render json: {result: false};
   end
 end

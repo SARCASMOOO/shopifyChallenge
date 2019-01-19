@@ -21,7 +21,7 @@ class OrderController < ApplicationController
             cart_id: tempCart.id)
             @order.save
           end
-          
+
           render json: {result: true} and return;
         end
       end

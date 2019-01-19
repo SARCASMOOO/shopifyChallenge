@@ -12,7 +12,6 @@ class PurchaseFlowTest < ActionDispatch::IntegrationTest
     get "/order", params: {productName: @banana.name,
       cartName: @cartA.name, amount: 2}
     get '/buy',  params: {cartName: @cartA.name}
-
     assert_equal @banana.price*2, json_response['total'].to_i
   end
 
@@ -30,11 +29,13 @@ class PurchaseFlowTest < ActionDispatch::IntegrationTest
     get "/order", params: {productName: @banana.name,
       cartName: @cartA.name, amount: 2}
     get "/product", params: {name: @banana.name}
-    assert_equal @bannana.inventory, json_response['product']['inventory']._to_i
+    assert_equal @banana.inventory, json_response['product']['inventory'].to_i
+  end
 
-    #Check that buying will change inventory
-    get '/buy',  params: {cartName: @cartA.name}
+  test "Check that buying will change inventory" do
+    get "/order", params: {productName: @banana.name,
+      cartName: @cartA.name, amount: 2}
     get "/product", params: {name: @banana.name}
-    assert_equal @bannana.inventory - 2, json_response['product']['inventory']._to_i
+    assert_equal @banana.inventory, json_response['product']['inventory'].to_i
   end
 end

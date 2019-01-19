@@ -5,6 +5,4 @@ class ProductControllerTest < ActionDispatch::IntegrationTest
      @bannana = products(:bannana)
      @apple = products(:apple)
   end
-
-  #
 end

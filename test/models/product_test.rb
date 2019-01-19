@@ -11,9 +11,9 @@ class ProductTest < ActiveSupport::TestCase
 
   test "products should be unique" do
     duplicate_product = @product.dup
-    duplicate_product.name = @product.name.upcase
-    @product.save
-    assert_not duplicate_product.valid?
+     duplicate_product.name = @product.name.upcase
+     @product.save
+     assert_not duplicate_product.valid?
   end
 
   test "check if we can add a product with a negative price or zero" do

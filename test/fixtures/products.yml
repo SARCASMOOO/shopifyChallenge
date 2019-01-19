@@ -3,9 +3,19 @@
 one:
   name: MyString
   price: 1.5
-  inventory: 
+  inventory:
 
 two:
   name: MyString
   price: 1.5
-  inventory: 
+  inventory:
+
+bannana:
+    name: "Bannana"
+    price: 1.5
+    inventory: 3
+
+apple:
+    name: "Apple"
+    price: 1.2
+    inventory: 5

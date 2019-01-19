@@ -10,10 +10,18 @@ class OrderController < ApplicationController
     if tempProduct.nil? == false &&  tempCart.nil? == false
       if tempProduct.inventory > 0 && amount.nil? == false
         if amount.to_i > 0
-          @order = CartsProduct.new(amount: amount, product_id: tempProduct.id,
+          #check if order already exists
+          @order = CartsProduct.find_by(product_id: tempProduct.id,
           cart_id: tempCart.id)
 
-          @order.save
+          if @order.nil? == false
+            @order.update_attribute(:amount, @order.amount + amount)
+          else
+            @order = CartsProduct.new(amount: amount, product_id: tempProduct.id,
+            cart_id: tempCart.id)
+            @order.save
+          end
+          
           render json: {result: true} and return;
         end
       end

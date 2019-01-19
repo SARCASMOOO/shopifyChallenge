@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/products/', to: 'product#products'
   get '/purchase/', to: 'product#purchase'
   resources :product
+  resources :cart
 end

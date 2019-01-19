@@ -19,6 +19,7 @@ class ProductController < ApplicationController
   end
 
   def purchase
+    ## TODO:
     tempProd = Product.find_by(name: params[:name])
 
     if tempProd.nil? == false
@@ -30,5 +31,11 @@ class ProductController < ApplicationController
     end
 
     render json: {result: false};
+  end
+
+  def create
+    @product = Product.new(name: params[:name])
+    @product.save
+    render json: {result: true};
   end
 end

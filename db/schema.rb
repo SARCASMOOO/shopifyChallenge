@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190119161528) do
+ActiveRecord::Schema.define(version: 20190119180353) do
 
   create_table "carts", force: :cascade do |t|
     t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.index ["name"], name: "index_carts_on_name", unique: true
+  end
+
+  create_table "carts_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "cart_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_carts_products_on_cart_id"
+    t.index ["product_id"], name: "index_carts_products_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|

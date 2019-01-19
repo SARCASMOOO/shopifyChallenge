@@ -10,7 +10,7 @@
    price: 1.5
    inventory: 1
 
- bannana:
+ banana:
      name: "Banana"
      price: 1.5
      inventory: 3

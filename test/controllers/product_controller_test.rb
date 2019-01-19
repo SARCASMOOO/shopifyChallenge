@@ -8,6 +8,7 @@ class ProductControllerTest < ActionDispatch::IntegrationTest
 
   test "purchase too many apples" do
     assert false
+    post 
   end
 
   test "purchase when product with no inventory" do

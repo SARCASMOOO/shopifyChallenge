@@ -1,13 +1,25 @@
 class ProductController < ApplicationController
+  def update
+    puts params[:amount]
+    puts "test"
+    render json: {name: "test"};
+  end
+
+  def show
+    puts params[:amount]
+    puts "test"
+    render json: {name: "test"};
+  end
+
+  def create
+    puts params[:amount]
+    puts "test"
+    render json: {name: "test"};
+  end
+
   def products
-    #return all products or ones with inventory based on choice
-  end
-
-  def product
-    #return a specfic product
-  end
-
-  def purchase
-    #purchase a specific product 
+    puts params[:amount]
+    puts "test"
+    render json: {name: "test"};
   end
 end

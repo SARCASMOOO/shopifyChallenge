@@ -19,7 +19,7 @@ class ProductControllerTest < ActionDispatch::IntegrationTest
 
   test "purchase a negative ammount of a product" do
     get "/purchase", params: {name: @bannana.name, amount: -2}
-    assert_equal false, json_response['result']
+    assert_equal false, json_response['result'] 
   end
 
   test "purchase a product which does not exist" do

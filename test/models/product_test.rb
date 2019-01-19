@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
   def setup
-    @product = Product.new(name: "Apple", price: 1.96, inventory: 3)
+    @product = Product.new(name: "Bannana", price: 1.96, inventory: 3)
   end
 
   test "valid product" do

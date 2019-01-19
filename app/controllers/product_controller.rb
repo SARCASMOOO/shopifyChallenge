@@ -19,7 +19,6 @@ class ProductController < ApplicationController
   end
 
   def purchase
-    ## TODO:
     tempProd = Product.find_by(name: params[:name])
 
     if tempProd.nil? == false

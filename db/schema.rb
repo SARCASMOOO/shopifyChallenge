@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190118222133) do
+ActiveRecord::Schema.define(version: 20190119015141) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.float "price", limit: 30
+    t.float "price"
     t.integer "inventory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_products_on_name", unique: true
   end
 
 end

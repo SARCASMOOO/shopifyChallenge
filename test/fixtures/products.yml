@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ one:
+   name: MyString1
+   price: 1.5
+   inventory: 1
+
+ two:
+   name: MyString2
+   price: 1.5
+   inventory: 1
+
+ bannana:
+     name: "Banana"
+     price: 1.5
+     inventory: 3
+
+ apple:
+     name: "Apple"
+     price: 1.2
+     inventory: 0

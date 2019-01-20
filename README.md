@@ -5,7 +5,7 @@ https://github.com/SARCASMOOO/shopifyChallenge
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Instructions to setup and run rails server api
 
 * bundle install
 * rails db:migrate
@@ -18,11 +18,11 @@ These instructions will get you a copy of the project up and running on your loc
 Rails installation is required
 
 ## Thought process and notes
-In general I try to follow the red, green, refactor approach. Following TDD
-create tests run get red, wright implementation till test pass green, then refactor
-using the written test suite to catch regression.
+In general I try to follow the red, green, refactor approach.
 
-I used table association to enforce relation ships between cart, orders, and products
+Following TDD we create tests which when run get red, wright implementation till test pass which give green, then refactor using the written test suite to catch regression.
+
+I used table association to enforce relationships between cart, orders, and products
 
 See the linked github repository for confirmation of TDD approach.
 
@@ -32,8 +32,11 @@ any potential errors.
 ## Running the tests
 
 To run test suite type "rails test"
+
 For running controller tests type "rails test:controllers"
+
 For running model tests type "rails test:models"
+
 For running integration tests type "rails test:integration"
 
 ### API Documentation
@@ -155,7 +158,7 @@ Check we can grab all products which do not have inventory
 
 Used rails version 5.1.6.1
 
-## Authors
+## Author
 
 * **Steven Stapleton ** - [SARCASMOOO](https://github.com/SARCASMOOO)
 

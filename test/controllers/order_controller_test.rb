@@ -1,6 +1,6 @@
 #      ssstevenstapleton@gmail.com
 #      Order controller tests
-#      Purpose: Demonstrate the functionality of orders amd catch regression 
+#      Purpose: Demonstrate the functionality of orders amd catch regression
 
 require 'test_helper'
 

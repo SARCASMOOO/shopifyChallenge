@@ -1,3 +1,7 @@
+#      ssstevenstapleton@gmail.com
+#      Product Model
+#      Purpose: Validate product attributes
+
 class Product < ApplicationRecord
   before_save :downcase_name
   validates :name, presence: true, length: {maximum: 15}, uniqueness: {case_sensitive: false}

@@ -1,3 +1,9 @@
+#      ssstevenstapleton@gmail.com
+#      Product test
+#      Purpose: Demonstrate actions for products and catch regression
+#      Note: Calling products directly will change inventory.
+#      Order to cart then buy for delayed purchase
+
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase

@@ -1,3 +1,7 @@
+#      ssstevenstapleton@gmail.com
+#      Purchase flow test
+#      Purpose: Demonstrate the process from ordering to purchasing
+
 require 'test_helper'
 
 class PurchaseFlowTest < ActionDispatch::IntegrationTest
@@ -25,7 +29,6 @@ class PurchaseFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "check product inventory does not change before checking out" do
-    #Check inventory does not change before buying
     get "/order", params: {productName: @banana.name,
       cartName: @cartA.name, amount: 2}
     get "/product", params: {name: @banana.name}

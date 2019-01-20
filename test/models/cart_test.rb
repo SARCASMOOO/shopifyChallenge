@@ -1,3 +1,7 @@
+#      ssstevenstapleton@gmail.com
+#      Cart test
+#      Purpose: Demonstrate the validations for the cart model 
+
 require 'test_helper'
 
 class CartTest < ActiveSupport::TestCase

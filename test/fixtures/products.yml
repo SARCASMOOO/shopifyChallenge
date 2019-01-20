@@ -1,4 +1,6 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+#      ssstevenstapleton@gmail.com
+#      Product fixtures
+#      Purpose: Simple data samples
 
  one:
    name: MyString1

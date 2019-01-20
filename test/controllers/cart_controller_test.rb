@@ -1,3 +1,7 @@
+#      ssstevenstapleton@gmail.com
+#      Cart controller tests
+#      Purpose: Demonstrate the functionality of a cart amd catch regression
+
 require 'test_helper'
 
 class CartControllerTest < ActionDispatch::IntegrationTest

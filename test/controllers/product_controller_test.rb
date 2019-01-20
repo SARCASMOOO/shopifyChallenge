@@ -1,3 +1,7 @@
+#      ssstevenstapleton@gmail.com
+#      Product controller tests
+#      Purpose: Check the product controller and catch regression 
+
 require 'test_helper'
 
 class ProductControllerTest < ActionDispatch::IntegrationTest

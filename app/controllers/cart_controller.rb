@@ -1,10 +1,18 @@
+#      ssstevenstapleton@gmail.com
+#      Cart Controller
+#      Purpose: Implement Cart functionality
+
 class CartController < ApplicationController
+  #Params: name
+  #Purpose: Create a new cart
   def create
     @cart = Cart.new(name: params[:name], total: 0)
     @cart.save
     render json: {result: true};
   end
 
+  #Params: checkout
+  #Purpose: Finish order and purchase all items in cart
   def checkout
     tempCart = Cart.find_by(name: params[:cartName])
     if tempCart.nil? == false

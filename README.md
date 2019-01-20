@@ -29,7 +29,7 @@ See the linked github repository for confirmation of TDD approach.
 When working on a feature I will separate them into branches to avoid propagating
 any potential errors.
 
-## Running the tests
+## Running the test suite
 
 To run test suite type "rails test"
 

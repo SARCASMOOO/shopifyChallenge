@@ -1,6 +1,7 @@
-# Project Title
+# Shopify Challenge
 
-One Paragraph of project description goes here
+Marketplace rails API for shopify job submission.
+https://github.com/SARCASMOOO/shopifyChallenge
 
 ## Getting Started
 
